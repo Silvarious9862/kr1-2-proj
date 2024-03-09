@@ -1,6 +1,9 @@
 #pragma once
+#ifndef _MYSTACK
+#define _MYSTACK
 
-
+namespace my
+{
 template<typename T>
 class Stack
 {
@@ -25,9 +28,12 @@ private:
 public:
     Stack();
     ~Stack();
-    int getSize();
+    int getsize();
     void push(T data);
     void pop();
     T& top();
     void clear();
 };
+}
+
+#endif

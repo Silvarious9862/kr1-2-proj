@@ -1,33 +1,33 @@
 #include "mystack.h"
 
 template<typename T>
-Stack<T>::Stack()
+my::Stack<T>::Stack()
 {
     size = 0;
     head = nullptr;
 }
 
 template <typename T>
-Stack<T>::~Stack()
+my::Stack<T>::~Stack()
 {
     clear();
 }
 
 template <typename T>
-int Stack<T>::getSize()
+int my::Stack<T>::getsize()
 {
     return size;
 }
 
 template <typename T>
-void Stack<T>::push(T data)
+void my::Stack<T>::push(T data)
 {
     head = new Node(data, head);
     size++;
 }
 
 template <typename T>
-void Stack<T>::pop()
+void my::Stack<T>::pop()
 {
     Node<T> *tmp = head;
     head = head->pNext;
@@ -36,13 +36,13 @@ void Stack<T>::pop()
 }
 
 template <typename T>
-T& Stack<T>::top()
+T& my::Stack<T>::top()
 {
     return head->data;
 }
 
 template <typename T>
-void Stack<T>::clear()
+void my::Stack<T>::clear()
 {
     while(size) pop();
 }

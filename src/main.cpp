@@ -6,7 +6,7 @@
 
 int main()
 {
-    Stack<int> st;
+    my::Stack<int> st;
     int sizeN;
     srand(time(NULL));
     std::cout << "How much push? : ";
@@ -15,7 +15,7 @@ int main()
         st.push(rand()%100);
         
  
-    while(st.getSize()) 
+    while(st.getsize()) 
     {
         std::cout << "Top is: " << st.top() << std::endl;
         st.pop();
