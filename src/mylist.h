@@ -2,6 +2,9 @@
 #ifndef _MYLIST
 #define _MYLIST
 
+#define EMPTY 1
+#define OUT_OF_RANGE 2
+
 namespace my
 {
 
@@ -69,8 +72,24 @@ public:
     void erase(Iterator &it);
     void clear();
     bool empty();
-    Iterator begin() { return Iterator(head) ;}
-    Iterator end() { return Iterator(tail->pNext) ;} 
+    Iterator begin() 
+    { 
+        try
+        {
+            if(this->empty()) throw EMPTY;
+            return Iterator(head) ;
+        }
+        catch(EMPTY) { std::cout << "List is empty!" << endl; }
+    }    
+    Iterator end() 
+    { 
+        try
+        {
+            if(this->empty()) throw EMPTY;
+            return Iterator(tail->pNext) ;
+        }
+        catch(EMPTY) { std::cout << "List is empty!" << endl; }
+    }
 
 };
 }

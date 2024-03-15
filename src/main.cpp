@@ -1,6 +1,6 @@
 #include <iostream>
-#include "mystack.cpp"
-#include "mylist.cpp"
+#include "mystack.h"
+#include "mylist.h"
 #include <time.h>
 #include <list>
 
