@@ -1,4 +1,3 @@
-#pragma once
 #ifndef _MYLIST
 #define _MYLIST
 
