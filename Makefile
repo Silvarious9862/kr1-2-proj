@@ -8,7 +8,7 @@ CXXFLAGS = -std=c++20 -Wall
 LDFLAGS = 
 
 # Makefile settings - Can be customized.
-APPNAME = simplestack
+APPNAME = kr1-2
 EXT = .cpp
 SRCDIR = D:\ITBase\cpp\kr1-2-proj\src
 OBJDIR = obj

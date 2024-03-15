@@ -8,11 +8,10 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "d:/ITBase/cpp/kr1-2-proj",
-      "program": "d:/ITBase/cpp/kr1-2-proj/build/Debug/outDebug",
+      "cwd": "d:/ITBase/cpp/kr1-2-proj/src",
+      "program": "d:/ITBase/cpp/kr1-2-proj/src/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
-      "preLaunchTask": "g++.exe build active file",
       "setupCommands": [
         {
           "description": "Enable pretty-printing for gdb",

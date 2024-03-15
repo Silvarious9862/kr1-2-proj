@@ -1,26 +1,46 @@
 #include <iostream>
 #include "mystack.cpp"
+#include "mylist.cpp"
 #include <time.h>
+#include <list>
 
 
 
 int main()
 {
-    my::Stack<int> st;
-    int sizeN;
-    srand(time(NULL));
-    std::cout << "How much push? : ";
-    std::cin >> sizeN;
-    for(int i = 0; i<sizeN;i++)
-        st.push(rand()%100);
-        
- 
-    while(st.getsize()) 
-    {
-        std::cout << "Top is: " << st.top() << std::endl;
-        st.pop();
-    }
+    my::Stack<int> stack;
+    
+    std::cout << "start\n";
+    stack.push(5);
+    std::cout << "push 5\n";
+    stack.push(7);
+    std::cout << "push 7\n";
+    stack.push(10);
+    std::cout << "push 10\n";
+    std::cout << "top:" << stack.top() << "\n";
+    system("pause");
 
-    std::cout << "Exit with code 0";
+    my::List<int> list;
+    if(list.empty()) std::cout << "empty list\n";
+    else std::cout << "NONempty list\n";
+    list.push_back(13);
+    list.push_back(15);
+    list.push_back(17);
+    list.push_back(20);
+
+    for (auto i : list) std::cout << i.data << std::endl;
+
+    my::List<int>::Iterator it(list.begin()); 
+    ++it; ++it;
+    list.insert(55, it);
+    std::cout << "----\n";
+    for (auto i : list) std::cout << i.data << std::endl;
+    --it;
+    list.erase(it);
+    std::cout << "----\n";
+
+
+    for (auto i : list) std::cout << i.data << std::endl;
+
     return 0;
 }

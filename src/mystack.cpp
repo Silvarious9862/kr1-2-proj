@@ -22,7 +22,7 @@ int my::Stack<T>::getsize()
 template <typename T>
 void my::Stack<T>::push(T data)
 {
-    head = new Node(data, head);
+    head = new Node<T>(data, head);
     size++;
 }
 
