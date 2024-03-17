@@ -1,5 +1,6 @@
 #include "mystack.h"
-#define EMPTY 1
+#include <iostream>
+#define EMPTY -1
 
 template<typename T>
 my::Stack<T>::Stack()
@@ -37,9 +38,9 @@ void my::Stack<T>::pop()
         delete tmp;
         size--;
     }
-    catch(EMPTY)
+    catch(int a)
     {
-        std::cout << "Stack is empty!" << endl;
+        std::cout << "Stack is empty!" << std::endl;
     }
 }
 
@@ -51,9 +52,9 @@ T& my::Stack<T>::top()
         if (size == 0) throw EMPTY;
         return head->data;
     }
-    catch(EMPTY)
+    catch(int a)
     {
-        std::cout << "Stack is empty!" << endl;
+        std::cout << "Stack is empty!" << std::endl;
     }
     
 }

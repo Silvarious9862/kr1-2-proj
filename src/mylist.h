@@ -2,8 +2,11 @@
 #ifndef _MYLIST
 #define _MYLIST
 
-#define EMPTY 1
-#define OUT_OF_RANGE 2
+#define EMPTY -1
+#define OUT_OF_RANGE -2
+
+#include <iterator>
+#include <iostream>
 
 namespace my
 {
@@ -79,7 +82,7 @@ public:
             if(this->empty()) throw EMPTY;
             return Iterator(head) ;
         }
-        catch(EMPTY) { std::cout << "List is empty!" << endl; }
+        catch(int a) { std::cout << "List is empty!" << std::endl; }
     }    
     Iterator end() 
     { 
@@ -88,7 +91,7 @@ public:
             if(this->empty()) throw EMPTY;
             return Iterator(tail->pNext) ;
         }
-        catch(EMPTY) { std::cout << "List is empty!" << endl; }
+        catch(int a) { std::cout << "List is empty!" << std::endl; }
     }
 
 };

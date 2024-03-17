@@ -43,7 +43,7 @@ void my::List<T>::pop_front()
         delete tmp;
         size--;
     }
-    catch(EMPTY) { std::cout << "List is empty!" << '\n'; }
+    catch(int a) { std::cout << "List is empty!" << '\n'; }
     
 }
 
@@ -70,7 +70,7 @@ void my::List<T>::pop_back()
         delete tmp;
         size--;
     }
-    catch(EMPTY) { std::cout << "List is empty!" << '\n'; }
+    catch(int a) { std::cout << "List is empty!" << '\n'; }
 }
 
 template <typename T>
@@ -87,7 +87,7 @@ void my::List<T>::insert(T data, Iterator &it)
         before->pNext = tmp;
         size++; 
     }
-    catch(OUT_OF_RANGE)  { std::cout << "Insert position is out of range of list!\n"; }
+    catch(int a)  { std::cout << "Insert position is out of range of list!\n"; }
 }
 
 template <typename T>
@@ -107,7 +107,7 @@ void my::List<T>::erase(Iterator &it)
         delete tmp;
         size--;
     }
-    catch(OUT_OF_RANGE)  { std::cout << "Erase position is out of range of list!\n"; }
+    catch(int a)  { std::cout << "Erase position is out of range of list!\n"; }
 }
 
 template <typename T>
@@ -118,7 +118,7 @@ T& my::List<T>::front()
         if (this->empty()) throw EMPTY;
         return head->data;
     }
-    catch(EMPTY) { std::cout << "List is empty!" << endl; }
+    catch(int a) { std::cout << "List is empty!" << std::endl; }
 }
 
 template <typename T>
@@ -129,7 +129,7 @@ T& my::List<T>::back()
         if (this->empty()) throw EMPTY;
         return tail->data;
     }
-    catch(EMPTY) { std::cout << "List is empty!" << endl; }
+    catch(int a) { std::cout << "List is empty!" << std::endl; }
 }
 
 template <typename T>
