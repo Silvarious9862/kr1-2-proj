@@ -35,7 +35,7 @@ int main()
     list.insert(55, it);
     std::cout << "----\n";
     for (auto i : list) std::cout << i.data << std::endl;
-    --it;
+    --it; --it;
     list.erase(it);
     std::cout << "----\n";
 
