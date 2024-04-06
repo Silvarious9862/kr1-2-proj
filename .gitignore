@@ -1,3 +1,8 @@
+*.bin
 *.jpg
 *.drawio
 *.pdf
+*.d
+obj/
+build/
+*vscode/
