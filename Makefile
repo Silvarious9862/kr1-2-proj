@@ -8,7 +8,7 @@ CXXFLAGS = -std=c++20 -Wall
 LDFLAGS = 
 
 # Makefile settings - Can be customized.
-APPNAME = kr1-2
+APPNAME = myapp
 EXT = .cpp
 SRCDIR = D:\ITBase\cpp\kr1-2-proj\src
 OBJDIR = obj
