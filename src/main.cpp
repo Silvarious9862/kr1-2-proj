@@ -18,6 +18,10 @@ int main()
     stack.push(10);
     std::cout << "push 10\n";
     std::cout << "top:" << stack.top() << "\n";
+    stack.pop();
+    stack.pop();
+    stack.pop();
+    stack.pop();
     system("pause");
 
     my::List<int> list;
